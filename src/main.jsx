@@ -13,10 +13,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: async () => {
+          const meals = [];
+
+          for (let i = 0; i < 6; i++) {
+            const res = await fetch(
+              "https://www.themealdb.com/api/json/v1/1/random.php"
+            );
+            const data = await res.json();
+            meals.push(data.meals[0]);
+          }
+          return meals;
+        },
         Component: Home,
       },
       {
         path: "/details",
+
         Component: Details,
       },
     ],
