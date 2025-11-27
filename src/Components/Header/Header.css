@@ -29,3 +29,57 @@ nav a.active {
   display: flex;
   gap: 5px;
 }
+
+.menu-icon {
+  color: red;
+  font-size: 30px;
+  display: none;
+}
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 570px) {
+  nav {
+    justify-content: start;
+    gap: 20px;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  .navigation-container {
+    display: none;
+  }
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    list-style-type: none;
+  }
+  nav a {
+    color: white;
+    background: rgba(255, 0, 0, 0.63);
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .icon {
+    position: relative;
+  }
+  .navigation {
+    position: absolute;
+    /* border: 1px solid red; */
+    padding: 10px;
+    /* top: -100px; */
+  }
+}
+
+@media screen and (min-width: 1180px) {
+}
