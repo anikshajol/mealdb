@@ -1,0 +1,9 @@
+#root {
+  background-color: black;
+}
+.wrapper {
+  width: 100vw;
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100vh;
+}
